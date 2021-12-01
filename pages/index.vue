@@ -65,85 +65,57 @@
 
       <v-menu offset-y left>
         <template v-slot:activator="{ on }">
-          <v-btn outlined><v-icon size="25">mdi-account</v-icon>
+          <v-btn outlined color="primary"><v-icon size="25">mdi-account</v-icon>
             SIGN IN
           </v-btn>
         </template>
 
       </v-menu>
     </v-app-bar>
-    <div class="chip">
-          <v-chip
-            outlined
-          >All</v-chip>
-      </div>
-        <div class="chip">
-          <v-chip
-            outlined
-          >Live</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Blues rock music</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Deep House</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Chill-out music</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Christmas music</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Kygo</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Music</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Russian chanson music</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Techno</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Tourism</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Orchestra</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Melodramas</v-chip>
-      </div>
-      <div class="chip">
-          <v-chip
-            outlined
-          >Albums</v-chip>
-      </div>
 
-    <img src="../assets/youtube.png"></img>
+    <div class="chips">
+          <v-chip outlined color="white">All</v-chip>
+          <v-chip outlined color="white">Live</v-chip>
+          <v-chip outlined color="white">Blues rock music</v-chip>
+          <v-chip outlined color="white">Deep House</v-chip>
+          <v-chip outlined color="white">Chill-out music</v-chip>
+          <v-chip outlined color="white">Christmas music</v-chip>
+          <v-chip outlined color="white">Kygo</v-chip>
+          <v-chip outlined color="white">Music</v-chip>
+          <v-chip outlined color="white">Russian chanson music</v-chip>
+          <v-chip outlined color="white">Techno</v-chip>
+          <v-chip outlined color="white">Tourism</v-chip>
+          <v-chip outlined color="white">Orchestra</v-chip>
+          <v-chip outlined color="white">Melodramas</v-chip>
+          <v-chip outlined color="white">Game shows</v-chip>
+          <v-chip outlined color="white">Tools</v-chip>
+          <v-chip outlined color="white">Nature</v-chip>
+          <v-chip outlined color="white">Snow</v-chip>
+          </div>
+
+    <div class="content">
+        <div class="vid">
+            <div class="preview">
+                <img src="../assets/minecraft.jpg" alt=""> 
+                <div class="time">1:50</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="https://picsum.photos/201">
+                <div class="below">
+                    <h2>Minecraft Caves & Cliffs Update: Part II - Official Trailer</h2>
+                    <p class="username">Minecraft</p>
+                    <p>1.4M views &bull; 1 day ago</p>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -186,9 +158,6 @@
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-icon>
               <v-list-item-avatar v-else class="mr-5">
-                <img
-                  :src="`https://randomuser.me/api/portraits/men/${i}.jpg`"
-                />
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title class=" font-weight-medium subtitle-2">{{
@@ -216,6 +185,7 @@
     </v-navigation-drawer>
   </nav>
 </template>
+
 
 <script>
 export default {
@@ -439,10 +409,10 @@ export default {
   .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
     background-color: rgba(48, 121, 244, 0.5);
   }
-  .chip {
+  .chips {
     display:inline-block;
     vertical-align: top;
-    margin-left:20px;
+    margin-left:30px;
   }
   .yt {
     color:red;
@@ -451,5 +421,161 @@ export default {
     width: 100%;
     height:100%;
   }
+
+.left, .middle, .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left {
+    width: 160px;
+}
+.left i{
+    margin-right: 20px;
+}
+
+.middle .search input{
+    background-color: var(--bg-main);
+    border: 1px solid var(--light-gray);
+    padding: 7px;
+    width: 500px;
+    font-size: 1.2em;
+    color: lightgray;
+
+    border-collapse: collapse;
+}
+
+.middle .search input:focus{
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
+.middle .search .searchbtn {
+    height: 2em;
+    width: 80px;
+    font-size: 1.2em;
+    color: rgb(122, 122, 122);
+    background-color: var(--light-gray);
+    display: grid;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+.searchbtn i {
+    color: white;
+    opacity: .4;
+}
+.searchbtn:hover i {
+    opacity: .8;
+}
+
+.topbar .middle .fa-microphone {
+    margin-left: 20px;
+}
+
+.right {
+    width: 300px;
+    justify-content: space-evenly;
+}
+.right .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+}
+
+img.profile {
+    height: 2.2em;
+    border-radius: 50%;
+}
+
+.content {
+    margin-top: 60px;
+    margin-left: 230px;
+    height: 120vh;
+    padding: 3%;
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vid {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.vid .idk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.below {
+    display: inline;
+    width: 96px;
+    margin-left: 8px;
+}
+
+.vid .idk h2, .vid .idk p{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.idk h2 {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+.idk p{
+    color: #aaaaaa;
+}
+
+p.username:hover{
+    color: white;
+}
+
+.idk i {
+    margin-top: 5px;
+    color: #aaaaaa;
+}
+
+.preview .time {
+    font-size: .8em;
+    position: absolute;
+    transform: translate(300px, -30px);
+    padding: 3px;
+    padding-right: 5px;
+    border-radius: 3px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+.hovicons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(310px, -190px);
+    opacity: 0;
+}
+
+.vid:hover .hovicons {
+    opacity: 1;
+}
+
+.hovicons i{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-bottom: 5px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 3px;
+}
+
 }
 </style>

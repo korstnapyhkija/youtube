@@ -15,8 +15,6 @@
         placeholder="Search"
         outlined
         dense
-        v-model="searchText"
-        @click:append="search"
         class="hidden-sm-and-down"
       ></v-text-field>
       </v-tooltip>
@@ -33,7 +31,7 @@
       <v-menu offsetY>
         
         <v-list>
-          <v-list-item router to="/studio">
+          <v-list-item>
             <v-list-item-icon class="mr-3"
               ><v-icon>mdi-play-box-outline</v-icon></v-list-item-icon
             >
@@ -96,7 +94,7 @@
     <div class="content">
         <div class="vid">
             <div class="preview">
-                <img src="../assets/minecraft.jpg" alt=""> 
+                <img src="../assets/minecraft.jpg" > 
                 <div class="time">1:50</div>
                 <div class="hovicons">
                   <v-icon>mdi-clock-outline</v-icon>
@@ -105,7 +103,7 @@
             </div>
             <div class="idk">
                 <div class="left">
-                <img class="profile" src="https://picsum.photos/201">
+                <img class="profile" src="../assets/mojang.jpg">
                 <div class="below">
                     <h2>Minecraft Caves & Cliffs Update: Part II - Official Trailer</h2>
                     <p class="username">Minecraft</p>
@@ -168,18 +166,6 @@
             <v-divider class="mt-2 mb-2"></v-divider>
           </div>
 
-          <span v-for="link in links" :key="link.text">
-            <span v-if="link.text === 'Terms'" class="mb-2 d-block"> </span>
-            <v-btn
-              href
-              router
-              :to="link.link"
-              text
-              class="text-capitalize px-1"
-              small
-              >{{ link.text }}</v-btn
-            >
-          </span>
         </v-list>
       </div>
     </v-navigation-drawer>
@@ -330,13 +316,7 @@ export default {
     searchText: ''
   }),
   methods: {
-    search() {
-      if (!this.searchText) return
-      this.$router.push({
-        name: 'Search',
-        query: { 'search-query': this.searchText }
-      })
-    }
+    
   },
   mounted() {
     this.drawer = this.$vuetify.breakpoint.mdAndDown ? false : true
@@ -418,8 +398,8 @@ export default {
     color:red;
   }
   img{
-    width: 100%;
-    height:100%;
+    width: auto;
+    height:200px;
   }
 
 .left, .middle, .right {
@@ -496,7 +476,7 @@ img.profile {
 
 .content {
     margin-top: 60px;
-    margin-left: 230px;
+    margin-left: 20px;
     height: 120vh;
     padding: 3%;
     font-family: sans-serif;
@@ -508,7 +488,7 @@ img.profile {
     margin: 10px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 200px;
     cursor: pointer;
 }
 
@@ -522,6 +502,7 @@ img.profile {
     display: inline;
     width: 96px;
     margin-left: 8px;
+    word-break: break-all;
 }
 
 .vid .idk h2, .vid .idk p{

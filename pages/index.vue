@@ -17,7 +17,6 @@
         dense
         class="hidden-sm-and-down"
       ></v-text-field>
-      </v-tooltip>
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on" class="mr-7">
@@ -105,15 +104,156 @@
                 <div class="left">
                 <img class="profile" src="../assets/mojang.jpg">
                 <div class="below">
-                    <h2>Minecraft Caves & Cliffs Update: Part II - Official Trailer</h2>
+                    <h2>Minecraft Caves & Cliffs Update</h2>
                     <p class="username">Minecraft</p>
-                    <p>1.4M views &bull; 1 day ago</p>
-
-                    </div>
-                </div>
+                    <p>1.4M views &bull; 15 days ago</p>
+                  </div>
               </div>
             </div>
           </div>
+
+        <div class="vid">
+            <div class="preview">
+                <img src="../assets/minecraft2.jpg" > 
+                <div class="time">1:30</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/mojang.jpg">
+                <div class="below">
+                    <h2>Minecraft The Wild Update</h2>
+                    <p class="username">Minecraft</p>
+                    <p>1.8M views &bull; 1 day ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/baymax.jpg" > 
+                <div class="time">2:20</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/ea.jpg">
+                <div class="below">
+                    <h2>BAYMAX! Trailer (2022)</h2>
+                    <p class="username">Entertainment Access</p>
+                    <p>3.4M views &bull; 1 month ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/minecraft3.jpg" > 
+                <div class="time">48:00</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/mojang.jpg">
+                <div class="below">
+                    <h2>Minecraft 1.18 Sountrack</h2>
+                    <p class="username">Minecraft</p>
+                    <p>1.4M views &bull; 1 day ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/moth.jpg" > 
+                <div class="time">37:20</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/ng.jpg">
+                <div class="below">
+                    <h2>Väike moth</h2>
+                    <p class="username">National Geographic</p>
+                    <p>100 views &bull; 1 min ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/burger.jpg" > 
+                <div class="time">1:50</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/burger.jpg">
+                <div class="below">
+                    <h2>Burger</h2>
+                    <p class="username">Burger</p>
+                    <p>23.4M views &bull; 4 days ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/tbg.jpg" > 
+                <div class="time">2:10</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/ea.jpg">
+                <div class="below">
+                    <h2>The Bad Guys Trailer (2022)</h2>
+                    <p class="username">Entertainment Access</p>
+                    <p>385K views &bull; 18 hours ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid">
+            <div class="preview">
+                <img src="../assets/minecraft4.jpeg" > 
+                <div class="time">16:32</div>
+                <div class="hovicons">
+                  <v-icon>mdi-clock-outline</v-icon>
+                  <v-icon>mdi-menu</v-icon>
+                </div>
+            </div>
+            <div class="idk">
+                <div class="left">
+                <img class="profile" src="../assets/pew.png">
+                <div class="below">
+                    <h2>New Minecraft Update!</h2>
+                    <p class="username">Pewdiepie</p>
+                    <p>3M views &bull; 6 days ago</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -397,8 +537,8 @@ export default {
   .yt {
     color:red;
   }
-  img{
-    width: auto;
+  .preview img {
+    width: 350px;
     height:200px;
   }
 
@@ -475,36 +615,32 @@ img.profile {
 }
 
 .content {
-    margin-top: 60px;
+    margin-top: 20px;
     margin-left: 20px;
-    height: 120vh;
+    height: 80vh;
+    width: auto;
     padding: 3%;
     font-family: sans-serif;
     display: flex;
     flex-wrap: wrap;
-}
-
-.vid {
+  } 
+  .vid {
     margin: 10px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: fit-content;
     cursor: pointer;
-}
-
-.vid .idk {
+  }
+  .vid .idk {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .below {
     display: inline;
     width: 96px;
     margin-left: 8px;
-    word-break: break-all;
 }
-
 .vid .idk h2, .vid .idk p{
     margin: 0;
     padding: 0;
@@ -518,16 +654,13 @@ img.profile {
 .idk p{
     color: #aaaaaa;
 }
-
 p.username:hover{
     color: white;
 }
-
-.idk i {
+.idk .v-icon {
     margin-top: 5px;
     color: #aaaaaa;
 }
-
 .preview .time {
     font-size: .8em;
     position: absolute;
@@ -545,17 +678,30 @@ p.username:hover{
     transform: translate(310px, -190px);
     opacity: 0;
 }
-
 .vid:hover .hovicons {
     opacity: 1;
 }
-
-.hovicons i{
+.hovicons .v-icon{
     color: white;
     background-color: rgba(0, 0, 0, 0.733);
     margin-bottom: 5px;
     padding: 4px 4px 4px 4px;
     border-radius: 3px;
+}
+.left {
+    width: 160px;
+}
+.left .v-icon{
+    margin-right: 20px;
+}
+img.profile {
+    height: 2.2em;
+    border-radius: 50%;
+}
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 }
